@@ -1,9 +1,13 @@
 import {Prop, Schema, SchemaFactory} from '@nestjs/mongoose';
+import {Types} from 'mongoose';
 
 @Schema()
 export class ReviewModel {
 	@Prop()
 	_id: string;
+
+	@Prop()
+	productId: Types.ObjectId;
 
 	@Prop()
 	name: string;
